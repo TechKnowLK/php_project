@@ -28,12 +28,41 @@
       </li> -->
     </ul>
     <ul class="navbar-nav">
-      <li class="nav-item">
+      
+ <!--      <li class="nav-item">
         <a class="nav-link" href="sign_in.php">Sing In</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="sign_up.php">Sing Up</a>
-      </li>
+      </li> -->
+
+      <?php 
+
+        if (isset($_SESSION['User_firstname'])) {
+
+          echo "<li class='nav-item'>
+        <a class='nav-link' href='sign_up.php'>Creat Post</a>
+      </li>";
+
+          echo "<li class='nav-item'>
+        <a class='nav-link' href='sign_out.php'>Sign Out</a>
+      </li>";
+
+
+        }else{
+
+
+          echo "<li class='nav-item'>
+        <a class='nav-link' href='sign_up.php'>Sign Up</a>
+      </li>";
+
+          echo "<li class='nav-item'>
+        <a class='nav-link' href='sign_in.php'>Sign In</a>
+      </li>";           
+
+        }
+
+       ?>
 
     </ul>
   </div>
